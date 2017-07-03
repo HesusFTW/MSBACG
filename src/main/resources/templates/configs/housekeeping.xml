@@ -1,0 +1,4 @@
+<Housekeeping>
+      <Interval>60</Interval>
+      <DeleteDailyArchive>10</DeleteDailyArchive>
+</Housekeeping>

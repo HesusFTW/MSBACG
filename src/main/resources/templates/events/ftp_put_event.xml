@@ -1,0 +1,27 @@
+<FTPPutEvent>
+    <Name/>
+    <InputDir/>
+    <ReadSubfolders/>
+    <RegEx/>
+    <ArchiveDirectory/>
+    <SleepRecoverableError/>
+    <PollInterval/>
+    <FTPConnection>
+        <Name/>
+        <Protocol>SFTP</Protocol>
+        <Host/>
+        <Port/>
+        <User/>
+        <PrivateKey/>
+        <PrivateKeyPassword/>
+        <Password/>
+        <EncryptedPassword/>
+        <PrivateKeyEncryptedPassword/>
+        <TargetDir/>
+        <SleepRecoverableError/>
+        <PollInterval/>
+        <Retry/>
+        <ArchiveDirectory/>
+        <Overwrite/>
+    </FTPConnection>
+</FTPPutEvent>

@@ -1,0 +1,19 @@
+<JMSQueueEvent>
+	<Name/>
+	<InitialContextFactory>com.ibm.mq.jms.context.WMQInitialContextFactory</InitialContextFactory>
+	<ProviderURL/>
+	<ConnectionFactory/>
+	<QueueName/>
+	<FaultQueue/>
+	<OutputDir/>
+	<Writer/>
+	<StagingDirectory/>
+	<SleepRecoverableError/>
+	<PollInterval/>
+	<FileEncoding/>
+	<StopOnDuplicateFile/>
+	<HeaderFileLocation/>
+	<FooterFileLocation/>
+	<MoveWhenSize/>
+	<MoveWhenTime/>
+</JMSQueueEvent>

@@ -1,0 +1,35 @@
+<JMSBulkFileEvent>
+    <Name/>
+    <InitialContextFactory>com.ibm.mq.jms.context.WMQInitialContextFactory</InitialContextFactory>
+    <ProviderURL/>
+    <ConnectionFactory/>
+    <QueueName/>
+    <InputDir/>
+    <RegEx/>
+    <BlockSize/>
+    <Priority/>
+    <ArchiveDirectory/>
+    <Binary/>
+    <SleepRecoverableError/>
+    <PollInterval/>
+    <FileEncoding/>
+    <FileOrder/>
+    <FileLock/>
+    <Persistence/>
+    <OKFile/>
+    <CheckInterval/>
+    <KeepFile/>
+    <KeepFileLogger/>
+    <ReadSubfolders/>
+
+    <MSBHeader headerversion="">
+        <SourceApplication/>
+        <Operation/>
+        <Service/>
+        <ServiceVersion/>
+        <Country/>
+        <Salesline/>
+        <Store/>
+    </MSBHeader>
+
+</JMSBulkFileEvent>

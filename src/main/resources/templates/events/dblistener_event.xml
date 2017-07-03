@@ -1,0 +1,44 @@
+<DBListener>
+    <Name/>
+    <TargetQueue/>
+    <InitialContextFactory>com.ibm.mq.jms.context.WMQInitialContextFactory</InitialContextFactory>
+    <ProviderURL/>
+    <ConnectionFactory/>
+    <BatchSize/>
+    <SleepRecoverableError/>
+    <PollInterval/>
+    <JDBCDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</JDBCDriver>
+    <JDBCConnection/>
+    <JDBCUser/>
+    <EncryptedPassword/>
+    <InterfaceTable/>
+    <!--This tag is used to sort the selected from interface table data by a certain column. Default value Sequence. If tag has no value,no storing is performed-->
+    <OrderByColumn/>
+    <Where/>
+    <MSBHeaderMapping headerversion="1.1">
+    	    <Sequence/>
+            <Priority/>
+            <Requestor/>
+            <SourceApplication/>
+            <TargetApplication/>
+            <Service/>
+            <ServiceVersion/>
+            <Operation/>
+            <Country/>
+            <Salesline/>
+            <Store/>
+            <UUID/>
+            <LastInGroup/>
+            <Payload/>
+            <TargetFileName/>
+            <Key1/>
+            <Key2/>
+            <Key3/>
+            <Key4/>
+            <Key5/>
+            <Persistence/>
+            <CorrelationId/>
+            <GID/>
+            <GroupSeq/>
+    </MSBHeaderMapping>
+</DBListener>

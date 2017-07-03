@@ -1,0 +1,17 @@
+<FTPGetEvent>
+    <Name/>
+    <InputDir/>
+    <RegEx/>
+    <ArchiveDir/>
+    <OutputDir/>
+    <StagingDirectory/>
+    <SleepRecoverableError/>
+    <PollInterval/>
+    <StopOnDuplicateFile/>
+    <Retry/>
+    <Protocol>SFTP</Protocol>
+    <Host/>
+    <Port/>
+    <User/>
+    <Password/>
+</FTPGetEvent>

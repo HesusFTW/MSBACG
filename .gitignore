@@ -1,0 +1,10 @@
+## IntelliJ Folders
+/.idea
+/target
+/.settings
+/src/site
+/src/test
+
+## Files
+nb-configuration.xml
+

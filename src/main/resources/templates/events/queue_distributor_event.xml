@@ -1,0 +1,11 @@
+<JMSQueueDistributorEvent>
+    <Name/>
+    <InitialContextFactory>com.ibm.mq.jms.context.WMQInitialContextFactory</InitialContextFactory>
+    <ProviderURL/>
+    <ConnectionFactory/>
+    <queueName/>
+    <FaultQueue/>
+    <PollInterval/>
+    <SleepRecoverableError/>
+    <Services/>
+</JMSQueueDistributorEvent>
