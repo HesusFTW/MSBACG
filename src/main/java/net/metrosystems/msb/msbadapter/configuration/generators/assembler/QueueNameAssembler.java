@@ -17,6 +17,7 @@ public class QueueNameAssembler {
 	private static final String TRANSFER_DIRECTION = "upload";
 	private static final String QUEUES_SUFFIX = "delivery";
 	private static final String SPECIAL_QUEUE = "mip";
+	private static final String SPECIAL_COUNTRY = "mip.real.de.";
 	private static Iterator<String> iterator;
 
 	/**
@@ -94,5 +95,17 @@ public class QueueNameAssembler {
 		sb.append(SEPARATOR);
 		sb.append(QUEUES_SUFFIX);
 		return sb.toString();
+	}
+
+	public static String assembleToMipQueues(List<String> queueNames) {
+		StringBuilder stringBuilder = new StringBuilder();
+		Iterator<String> iterator = queueNames.iterator();
+		while (iterator.hasNext()) {
+			stringBuilder.append(SPECIAL_COUNTRY).append(iterator.next()).append(".to_mip");
+			if (iterator.hasNext()) {
+				stringBuilder.append(";");
+			}
+		}
+		return stringBuilder.toString();
 	}
 }

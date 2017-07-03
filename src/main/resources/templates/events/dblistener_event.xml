@@ -7,7 +7,7 @@
     <BatchSize/>
     <SleepRecoverableError/>
     <PollInterval/>
-    <JDBCDriver>com.microsoft.sqlserver.jdbc.SQLServerDriver</JDBCDriver>
+    <JDBCDriver/>
     <JDBCConnection/>
     <JDBCUser/>
     <EncryptedPassword/>
