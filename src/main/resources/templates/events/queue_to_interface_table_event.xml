@@ -1,0 +1,34 @@
+<QueueToInterfaceTable>
+	<Name/>
+	<InitialContextFactory>com.ibm.mq.jms.context.WMQInitialContextFactory</InitialContextFactory>
+	<ProviderURL/>
+	<ConnectionFactory/>
+	<QueueName/>
+	<FaultQueue/>
+	<PollInterval/>
+	<SleepRecoverableError/>
+	<InterfaceTable/>
+	<JDBCDriver/>
+	<JDBCConnection/>
+	<EncryptedPassword/>
+	<JDBCUser/>
+	<MSBHeaderMapping headerversion="1.1">
+		<SourceApplication/>
+		<Service/>
+		<ServiceVersion/>
+		<Operation/>
+		<Country/>
+		<Salesline/>
+		<Store/>
+		<UUID/>
+		<CorrelationId/>
+		<GID/>
+		<GroupSeq/>
+		<SourceFileName/>
+		<Key1/>
+		<Key2/>
+		<Key3/>
+		<Key4/>
+		<Key5/>
+	</MSBHeaderMapping>
+</QueueToInterfaceTable>

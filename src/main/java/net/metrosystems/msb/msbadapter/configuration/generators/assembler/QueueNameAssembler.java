@@ -18,6 +18,9 @@ public class QueueNameAssembler {
 	private static final String QUEUES_SUFFIX = "delivery";
 	private static final String SPECIAL_QUEUE = "mip";
 	private static final String SPECIAL_COUNTRY = "mip.real.de.";
+	private static final String TO_MIP = ".to_mip";
+	private static final String TO_APP = ".to_app";
+	private static final String TO_ERROR = ".error";
 	private static Iterator<String> iterator;
 
 	/**
@@ -101,7 +104,31 @@ public class QueueNameAssembler {
 		StringBuilder stringBuilder = new StringBuilder();
 		Iterator<String> iterator = queueNames.iterator();
 		while (iterator.hasNext()) {
-			stringBuilder.append(SPECIAL_COUNTRY).append(iterator.next()).append(".to_mip");
+			stringBuilder.append(SPECIAL_COUNTRY).append(iterator.next()).append(TO_MIP);
+			if (iterator.hasNext()) {
+				stringBuilder.append(";");
+			}
+		}
+		return stringBuilder.toString();
+	}
+
+	public static String assembleFromMipQueues(List<String> queueNames) {
+		StringBuilder stringBuilder = new StringBuilder();
+		Iterator<String> iterator = queueNames.iterator();
+		while (iterator.hasNext()) {
+			stringBuilder.append(SPECIAL_COUNTRY).append(iterator.next()).append(TO_APP);
+			if (iterator.hasNext()) {
+				stringBuilder.append(";");
+			}
+		}
+		return stringBuilder.toString();
+	}
+
+	public static String assembleFromMipFaultQueues(List<String> queueNames) {
+		StringBuilder stringBuilder = new StringBuilder();
+		Iterator<String> iterator = queueNames.iterator();
+		while (iterator.hasNext()) {
+			stringBuilder.append(SPECIAL_COUNTRY).append(iterator.next()).append(TO_APP).append(TO_ERROR);
 			if (iterator.hasNext()) {
 				stringBuilder.append(";");
 			}

@@ -19,6 +19,7 @@ public interface TemplateManager {
 	XMLTemplate getDBListenerEventTemplate() throws TemplateManagerException;
 //	TODO Remove this MCES bullshit after they fully adhere to LC 1.1
 	XMLTemplate getDBListenerEventMCESTemplate() throws TemplateManagerException;
+	XMLTemplate getQueueToInterfaceEventTemplate() throws TemplateManagerException;
 
 	XMLTemplate getHousekeepingTemplate()
 			throws TemplateManagerException;

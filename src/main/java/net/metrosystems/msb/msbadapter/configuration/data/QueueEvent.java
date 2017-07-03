@@ -24,7 +24,7 @@ public class QueueEvent extends Event {
 	private static final String MOVE_WHEN_TIME_TAG = "MoveWhenTime";
 	private static final String HEADER_FILE_LOCATION_TAG = "HeaderFileLocation";
 	private static final String FOOTER_FILE_LOCATION_TAG = "FooterFileLocation";
-	private static final String FAULT_QUUEUE = "FaultQueue";
+	private static final String FAULT_QUEUE = "FaultQueue";
 
 	private static final String sleepRecoverableErrorDefault = "60000";
 	private static final String pollIntervalDefault = "1000";
@@ -83,7 +83,7 @@ public class QueueEvent extends Event {
 		footerFileLocation = setNonMandatoryTagValue(el, FOOTER_FILE_LOCATION_TAG);
 		moveWhenSize = setNonMandatoryTagValue(el, MOVE_WHEN_SIZE_TAG);
 		moveWhenTime = setNonMandatoryTagValue(el, MOVE_WHEN_TIME_TAG);
-		faultQueue = setNonMandatoryTagValue(el, FAULT_QUUEUE);
+		faultQueue = setNonMandatoryTagValue(el, FAULT_QUEUE);
 		queueName = setNonMandatoryTagValue(el, QUEUE_NAME_TAG);
 	}
 
@@ -213,7 +213,7 @@ public class QueueEvent extends Event {
 		enrichElement(FOOTER_FILE_LOCATION_TAG, getFooterFileLocation());
 		enrichElement(MOVE_WHEN_SIZE_TAG, getMoveWhenSize());
 		enrichElement(MOVE_WHEN_TIME_TAG, getMoveWhenTime());
-		enrichElement(FAULT_QUUEUE, getFaultQueue());
+		enrichElement(FAULT_QUEUE, getFaultQueue());
 	}
 
 	@Override
