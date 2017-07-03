@@ -45,7 +45,7 @@ public class InputFileXMLParser implements FileParser {
     private static final String FILE_EVENT_XML_TAG = "FileEvent";
     private static final String QUEUE_EVENT_XML_TAG = "QueueEvent";
     private static final String QUEUE_DISTRIBUTOR_XML_TAG = "QueueDistributor";
-    private static final String DBLISTENER_EVENT_XML_TAG = "DblistenerEvent";
+    private static final String DB_LISTENER_EVENT_XML_TAG = "DBListenerEvent";
     private static final String FTP_PUT_EVENT_XML_TAG = "FTPPutEvent";
     private static final String FTP_GET_EVENT_XML_TAG = "FTPGetEvent";
     private static final Map<String, Class<?>> DATA_EVENTS;
@@ -55,7 +55,7 @@ public class InputFileXMLParser implements FileParser {
         DATA_EVENTS = new HashMap<String, Class<?>>();
         DATA_EVENTS.put(FILE_EVENT_XML_TAG, FileEvent.class);
         DATA_EVENTS.put(QUEUE_EVENT_XML_TAG, QueueEvent.class);
-        DATA_EVENTS.put(DBLISTENER_EVENT_XML_TAG, DBListenerEvent.class);
+        DATA_EVENTS.put(DB_LISTENER_EVENT_XML_TAG, DBListenerEvent.class);
         DATA_EVENTS.put(QUEUE_DISTRIBUTOR_XML_TAG, QueueDistributorEvent.class);
         DATA_EVENTS.put(FTP_PUT_EVENT_XML_TAG, FTPPutEvent.class);
         DATA_EVENTS.put(FTP_GET_EVENT_XML_TAG, FTPGetEvent.class);
