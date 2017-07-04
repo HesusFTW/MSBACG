@@ -15,7 +15,7 @@ public class FTPGetEvent extends Event {
     private static final String HOST_TAG = "Host";
     private static final String PORT_TAG = "Port";
     private static final String USER_TAG = "User";
-    private static final String PASSWORD_TAG = "Password";
+    private static final String PRIVATE_KEY_TAG = "PrivateKey";
     private static final String ARCHIVEDIRECTORY_XML_TAG = "ArchiveDir";
     private static final String SLEEPRECOVERABLEERROR_XML_TAG = "SleepRecoverableError";
     private static final String POLLINTERVAL_XML_TAG = "PollInterval";
@@ -114,7 +114,7 @@ public class FTPGetEvent extends Event {
         host = e.getChild(HOST_TAG).getValue();
         port = e.getChild(PORT_TAG).getValue();
         user = e.getChild(USER_TAG).getValue();
-        password = e.getChild(PASSWORD_TAG).getValue();
+        password = e.getChild(PRIVATE_KEY_TAG).getValue();
 
         if (e.getChild(ARCHIVEDIRECTORY_XML_TAG) != null) archiveDirectory = e.getChild(ARCHIVEDIRECTORY_XML_TAG).getValue();
         if (e.getChild(SLEEPRECOVERABLEERROR_XML_TAG) != null) sleepRecoverableError = e.getChild(SLEEPRECOVERABLEERROR_XML_TAG).getValue();
@@ -162,7 +162,7 @@ public class FTPGetEvent extends Event {
         enrichElement(HOST_TAG, getHost());
         enrichElement(PORT_TAG, getPort());
         enrichElement(USER_TAG, getUser());
-        enrichElement(PASSWORD_TAG, getPassword());
+        enrichElement(PRIVATE_KEY_TAG, getPassword());
 
         if (archiveDirectory != null) enrichElement(ARCHIVEDIRECTORY_XML_TAG, getArchiveDirectory());
         else detachElement(ARCHIVEDIRECTORY_XML_TAG);

@@ -13,5 +13,5 @@
     <Host/>
     <Port/>
     <User/>
-    <Password/>
+    <PrivateKey/>
 </FTPGetEvent>

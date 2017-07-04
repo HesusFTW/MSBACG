@@ -200,11 +200,24 @@ public class FileEvent extends Event {
 		source = e.getChild(SOURCE_XML_TAG).getValue();
 		targets = getTargetList(e.getChild(TARGETS_XML_TAG));
 		regexRule = e.getChild(REGEX_DATA_RXML_TAG).getValue();
-		priority = e.getChild(PRIORITY_XML_TAG).getValue();
-		bulking = e.getChild(BULKING_XML_TAG).getValue();
-		archiving = e.getChild(ARCHIVING_XML_TAG).getValue();
-		keepFile = e.getChild(KEEPFILE_XML_TAG).getValue();
-		readSubfolders = e.getChild(READSUBFOLDERS_XML_TAG).getValue();
+		if (e.getChild(PRIORITY_XML_TAG) != null) {
+			priority = e.getChild(PRIORITY_XML_TAG).getValue();
+		}
+		if (e.getChild(BULKING_XML_TAG) != null) {
+			bulking = e.getChild(BULKING_XML_TAG).getValue();
+		} else {
+			bulking = "false";
+		}
+		if (e.getChild(ARCHIVING_XML_TAG) != null) {
+			archiving = e.getChild(ARCHIVING_XML_TAG).getValue();
+		}
+		if (e.getChild(KEEPFILE_XML_TAG) != null) {
+			keepFile = e.getChild(KEEPFILE_XML_TAG).getValue();
+		}
+		if (e.getChild(READSUBFOLDERS_XML_TAG) != null) {
+			readSubfolders = e.getChild(READSUBFOLDERS_XML_TAG).getValue();
+		}
+
 		msbHeader = e.getChild(MSBHEADER_XML_TAG).getValue();
 		if (DEFAULT_TRUE.equals(msbHeader)) {
 			headerVersion = e.getChild(HEADERVERSION_XML_TAG).getValue();
@@ -267,7 +280,7 @@ public class FileEvent extends Event {
 		enrichElement(NAME_TAG, getName());
 		enrichElement(PROVIDER_URL_TAG, ProviderURLAssembler.assemble(getEnv().getHostname(), getEnv().getPort()));
 		enrichElement(CONNECTION_FACTORY_TAG, getEnv().getQueueManager());
-		enrichElement(QUEUE_NAME_TAG, QueueNameAssembler.assembleMultiQueue(getEnv().getNodeId(), getTargets()));
+		enrichElement(QUEUE_NAME_TAG, QueueNameAssembler.assembleToMipQueues(getTargets()));
 		enrichElement(INPUT_DIR_TAG, getSource());
 		enrichElement(REGEX_TAG, getRegexRule());
 		enrichElement(PRIORITY_TAG, getPriority());
@@ -276,6 +289,8 @@ public class FileEvent extends Event {
 
 		if (DEFAULT_TRUE.equals(archiving)) {
 			enrichElement(ARCHIVEDIRECTORY_TAG, PathAssembler.assembleArchiveDirectoryPath(getSource()));
+		} else if (archiving.contains("/") || archiving.contains("\\")){
+			enrichElement(ARCHIVEDIRECTORY_TAG, getArchiving());
 		} else {
 			detachElement(ARCHIVEDIRECTORY_TAG);
 		}
